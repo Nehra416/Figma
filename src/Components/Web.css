@@ -13,17 +13,26 @@ body {
     background-position: center;
 }
 
-/* .headerGradient {
-    width: 100vw;
-    height: 110vh;
-    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
-} */
-
 /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     color: white;
+    /* position: sticky;
+    top: 0px; */
+}
+
+.Phone_menu {
+    padding: 20px;
+    backdrop-filter: Blur(3px);
+    text-align: center;
+    display: none;
+}
+
+.Phone_menu a {
+    margin: 20px 0px;
+    color: lightgray;
+    font-weight: 500;
 }
 
 .navLeft ul {
@@ -39,6 +48,7 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
     margin: 20px;
+    color: white;
 }
 
 /* header innerDiv */
@@ -61,13 +71,14 @@ body {
     font-size: 18px;
 }
 
-.innerdiv .btn {
+/* navRight class se kam hi kaam ho gya */
+/* .innerdiv .btn {
     background-color: rgb(44, 44, 97);
     padding: 5px 10px;
     border-radius: 5px;
     color: white;
     margin-top: 20px;
-}
+} */
 
 /* header completed */
 
@@ -338,6 +349,7 @@ body {
     margin: 5% 10%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     gap: 40px;
 }
 
@@ -367,4 +379,25 @@ body {
 .lastright {
     display: flex;
     gap: 20px;
+}
+
+/* css for phones nav bar */
+
+.forPhone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+.menu {
+    width: 30px;
+    margin: 10px 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 500;
+    color: lightgray;
+    margin: 10px 15px;
 }

@@ -12,35 +12,79 @@ import google from "./Images/google.png"
 import t1 from "./Images/t1.png"
 import t2 from "./Images/t2.png"
 import t3 from "./Images/t3.png"
+import menu from "./Images/menu.png"
 
 
-export const Web2 = () => {
+export const Web2 = (props) => {
     return (
         <div >
             <div className="header ">
                 <div className="navbar" >
                     <div className="navLeft" >
-                        <ul className='`'>
-                            <li><a href="#">Nehra.com</a></li>
+                        <ul>
+
+                            {/* navBar by the props :) */}
+
+                            {props.data6.map((item) => {
+                                return (
+                                    <li><a href="#">{item}</a></li>
+                                )
+                            })}
+
+                            {/* navBar by the simple way */}
+
+                            {/* <li><a href="#">Nehra.com</a></li>
                             <li><a href="#">Demos</a></li>
                             <li><a href="#">Pages</a></li>
                             <li><a href="#">Support</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Contact</a></li> */}
+
                         </ul>
                     </div>
                     <div >
-                        <button className="navRight">Get started now</button>
+                        <button className="navRight">Get started now </button>
                     </div>
                 </div>
+
+                {/* Nav bar for phone */}
+                <div className='forPhone'>
+                    <div className='logo'>
+                        Nehra
+                    </div>
+                    <svg className='menu' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
+                </div>
+                <div className='Phone_menu'>
+                    <ul>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                        <li><a href="#">Nehra.com</a></li>
+                        <li><a href="#">Demos</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
                 <div className="innerdiv">
                     <p className='firstP'>Get help from the expert consultants.</p>
                     <p className='secondP'>With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes.</p>
-                    <button className='btn'>Get started now &rarr;</button>
+                    <button className='navRight'>Get started now &rarr;</button>
                 </div>
             </div>
 
+            {/* Rating by the props */}
             <div className="rating">
-                <div>
+                {props.data3.map((item) => {
+                    return (
+                        <div>
+                            <span className='big'>{item.rate}</span>
+                            <span>{item.info}</span>
+                        </div>
+                    )
+                })}
+
+                {/* Rating by the simple way :) */}
+
+                {/* <div>
                     <span className='big'>1M+</span>
                     <span>Customers visit Albino every months</span>
                 </div>
@@ -51,9 +95,10 @@ export const Web2 = () => {
                 <div>
                     <span className='big'>4.9</span>
                     <span>Average customer ratings out of 5.00!</span>
-                </div>
+                </div> */}
             </div><hr />
 
+            {/* Services by the props :) */}
             <div className="services">
                 <div className="firstdiv">
                     <p className='service1st'>Services we offer for you</p>
@@ -61,7 +106,18 @@ export const Web2 = () => {
                 </div>
 
                 <div className="seconddiv">
-                    <div className="s1">
+                    {props.data2.map((item) => {
+                        return (
+                            <div className="s1">
+                                <img src={item.img} />
+                                <p>{item.p}&rarr;</p>
+                            </div>
+                        )
+                    })}
+
+                    {/* services by the simple way */}
+
+                    {/* <div className="s1">
                         <img src={firstImage} />
                         <p>Digital Marketing &rarr;</p>
                     </div>
@@ -76,7 +132,7 @@ export const Web2 = () => {
                     <div className="s4">
                         <img src={fourthImage} />
                         <p>SEO for Business &rarr;</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
@@ -91,7 +147,21 @@ export const Web2 = () => {
                         <img src={content} />
                     </div>
                     <div className="Data">
-                        <div className="content1">
+
+                        {/* ContentDATA by the props :)*/}
+
+                        {props.data4.map((item) => {
+                            return (
+                                <div className="content1">
+                                    <h1>{item.h1}</h1>
+                                    <p>{item.p}</p>
+                                </div>
+                            )
+                        })}
+
+                        {/* ContentData by the simple way */}
+
+                        {/* <div className="content1">
                             <h1>Easy Booking</h1>
                             <p>With lots of unique blocks, you can easily build a page without coding. </p>
                         </div>
@@ -100,22 +170,48 @@ export const Web2 = () => {
                             <p>With lots of unique blocks, you can easily build a page without coding. </p>
                         </div>
                         <div className="content3">
-                            {/* <div className='sr'>3</div> */}
-                            <div>
-                                <h1>Get Your Results</h1>
-                                <p>With lots of unique blocks, you can easily build a page without coding. </p>
-                            </div>
-                        </div>
+                            <h1>Get Your Results</h1>
+                            <p>With lots of unique blocks, you can easily build a page without coding. </p>
+                        </div> */}
                     </div>
                 </div>
             </div>
 
+            {/* Alert */}
             <div className="alert">
                 <p>We’ve added a new exciting feature in v3.0. Get it now for $49.</p>
             </div>
 
+            {/* Testimonal by the props :) */}
             <div className="testimonal">
-                <div className="t1">
+                {props.data1.map((item) => {
+                    console.log(item) // for testing
+                    return (
+                        <div className="t1">
+
+                            {/* <center><img src={amazon} alt="amazon" className='amazon' /></center> */}
+                            <center><img src={item.img} alt="" className='amazon' /></center>
+
+                            <p className='testimonalP'>
+                                {/* “You made it so simple. My new site is so much faster & easier to work with Albino.” */}
+                                {item.p}
+                            </p>
+
+
+                            <div className="t1inner">
+                                <img src={item.logo} className='profile' />
+                                <div>
+                                    <h1>{item.h1}</h1>
+                                    <p>{item.small_p}</p>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })}
+
+                {/* Testimonal by the simple way */}
+
+                {/* <div className="t1">
                     <center><img src={amazon} alt="amazon" className='amazon' /></center>
                     <p className='testimonalP'>
                         “You made it so simple. My new site is so much faster & easier to work with Albino.”
@@ -153,7 +249,7 @@ export const Web2 = () => {
                             <p>Software Engineer</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <div className="form">
@@ -190,7 +286,26 @@ export const Web2 = () => {
             </div><hr />
 
             <div className="footer">
-                <div className="f1">
+
+                {/* Footer by the proops :) */}
+
+                {props.data5.map((item) => {
+                    return (
+                        <div className="f1">
+                            <ul>
+                                {item.li.map((lidata) => {
+                                    return (
+                                        <li>{lidata}</li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                    )
+                })}
+
+                {/* Footer by the simple way */}
+
+                {/* <div className="f1">
                     <ul>
                         <li>Company</li>
                         <li>About us</li>
@@ -225,7 +340,9 @@ export const Web2 = () => {
                         <li>SEO for Bussiness</li>
                         <li>UI Design</li>
                     </ul>
-                </div>
+                </div>*/}
+
+                {/* This li is different css property so don't include in props */}
                 <div className="f5">
                     <ul>
                         <li>Contact us</li>
@@ -241,7 +358,19 @@ export const Web2 = () => {
                 </div>
 
                 <div className="lastright">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    {/* Icons by the props :) */}
+
+                    {props.data7.map((item) => {
+                        return (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class={item.class} viewBox="0 0 16 16">
+                                <path d={item.path} />
+                            </svg>
+                        )
+                    })}
+
+                    {/* Share icons by the simple way */}
+
+                    {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
                         <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
                     </svg>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -252,7 +381,7 @@ export const Web2 = () => {
                     </svg>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
                         <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-                    </svg>
+                    </svg> */}
                 </div>
             </div>
         </div>
