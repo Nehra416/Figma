@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import "./Web.css"
+import "./Phone_responsive.css"
 import firstImage from "./Images/first.png"
 import secondImage from "./Images/2nd.png"
 import thirdImage from "./Images/3rd.png"
